@@ -9,7 +9,7 @@ namespace RecruiterApp
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new TodoList();
+			MainPage = new RecruiterTab();
 		}
 
 		protected override void OnStart ()
