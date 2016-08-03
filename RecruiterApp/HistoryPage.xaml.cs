@@ -10,7 +10,6 @@ namespace RecruiterApp
 		public HistoryPage()
 		{
 			InitializeComponent();
-
 		}
 	}
 }
