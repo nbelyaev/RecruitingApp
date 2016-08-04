@@ -9,7 +9,7 @@ namespace RecruiterApp
 	{
 		public HomePage()
 		{
-			//Hello there eric.
+			//Hello there!
 			InitializeComponent();
 		}
 	}
