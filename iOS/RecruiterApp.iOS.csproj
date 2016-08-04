@@ -85,10 +85,6 @@
       <HintPath>..\packages\Xamarin.Forms.2.0.1.6495\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.Platform.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Forms.2.0.1.6495\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.Forms.2.0.1.6495\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
@@ -96,6 +92,10 @@
     <Reference Include="Xamarin.iOS" />
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.Forms.2.0.1.6495\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.0.1.6495\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -134,13 +134,13 @@
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-76.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-76%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small-40.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\rsz_sogetiicon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\rsz_1rsz_sogetiicon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\rsz_1rsz_1rsz_sogetiicon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\rsz_1rsz_1rsz_1rsz_sogetiicon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\rsz_1sogetiicon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\rsz_1rsz_1sogetiicon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\rsz_2sogetiicon.png" />
   </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
