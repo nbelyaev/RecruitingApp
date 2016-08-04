@@ -6,27 +6,13 @@ namespace RecruiterApp
 {
     public partial class TodoList : ContentPage
     {
-        TodoItemManager manager;
+        ItemManager manager;
 
         public TodoList()
         {
             InitializeComponent();
 
-            manager = TodoItemManager.DefaultManager;
-
-            // OnPlatform<T> doesn't currently support the "Windows" target platform, so we have this check here.
-            if (manager.IsOfflineEnabled &&
-                (Device.OS == TargetPlatform.Windows || Device.OS == TargetPlatform.WinPhone))
-            {
-                var syncButton = new Button
-                {
-                    Text = "Sync items",
-                    HeightRequest = 30
-                };
-                syncButton.Clicked += OnSyncItems;
-
-                buttonsPanel.Children.Add(syncButton);
-            }
+            manager = ItemManager.DefaultManager;
         }
 
         protected override async void OnAppearing()

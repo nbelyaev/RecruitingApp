@@ -39,11 +39,6 @@ namespace RecruiterApp
 			get { return client; }
 		}
 
-		public bool IsOfflineEnabled
-		{
-			get { return todoTable is Microsoft.WindowsAzure.MobileServices.Sync.IMobileServiceSyncTable<TodoItem>; }
-		}
-
 		public async Task<ObservableCollection<TodoItem>> GetTodoItemsAsync(bool syncItems = false)
 		{
 			try
