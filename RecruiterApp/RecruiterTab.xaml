@@ -1,31 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:RecruiterApp" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecruiterApp.RecruiterTab">
 	<TabbedPage.Children>
-		<NavigationPage Title="Home Page" Icon="homeIcon.png">
-			<x:Arguments>
-				<local:HomePage/>
-			</x:Arguments>
-		</NavigationPage>
-		<NavigationPage Title="History Page" Icon="bookIcon.png">
+		<NavigationPage Title="History" Icon="bookIcon.png">
 			<x:Arguments>
 				<local:HistoryPage/>
 			</x:Arguments>
 		</NavigationPage>
-		<NavigationPage Title="Candidate Page" Icon="candidateIcon.png">
+		<NavigationPage Title="Candidate" Icon="candidateIcon.png" >
 			<x:Arguments>
 				<local:CandidatePage/>
 			</x:Arguments>
 		</NavigationPage>
-		<NavigationPage Title="Position Page" Icon="jobIcon.png">
+		<NavigationPage Title="Position" Icon="jobIcon.png">
 			<x:Arguments>
 				<local:PositionPage/>
 			</x:Arguments>
 		</NavigationPage>
-		<NavigationPage Title="Search Page" Icon="searchIcon.png">
+		<NavigationPage Title="Search" Icon="searchIcon.png">
 			<x:Arguments>
 				<local:SearchPage/>
 			</x:Arguments>
 		</NavigationPage>
-		<!--<local:TodoList/> comment here-->
+		<!--<local:TodoList/>-->
 	</TabbedPage.Children>
 </TabbedPage>
