@@ -26,6 +26,6 @@
 				<local:SearchPage/>
 			</x:Arguments>
 		</NavigationPage>
-		<!--<local:TodoList/>-->
+		<!--<local:TodoList/> comment here-->
 	</TabbedPage.Children>
 </TabbedPage>
