@@ -108,6 +108,11 @@
     <BundleResource Include="Resources\Icon-60%403x.png" />
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <BundleResource Include="Resources\Icon-Small-40%403x.png" />
+    <BundleResource Include="Resources\bookIcon.png" />
+    <BundleResource Include="Resources\candidateIcon.png" />
+    <BundleResource Include="Resources\homeIcon.png" />
+    <BundleResource Include="Resources\jobIcon.png" />
+    <BundleResource Include="Resources\searchIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
