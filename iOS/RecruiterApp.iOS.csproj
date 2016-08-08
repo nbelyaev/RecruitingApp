@@ -112,6 +112,7 @@
     <BundleResource Include="Resources\rsz_1sogetiicon.png" />
     <BundleResource Include="Resources\rsz_2sogetiicon.png" />
     <BundleResource Include="Resources\rsz_sogetiicon.png" />
+    <BundleResource Include="Resources\29sizeimage.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -161,6 +162,7 @@
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\rsz_2sogetiicon.png">
       <InProject>false</InProject>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\29sizeimage.png" />
   </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

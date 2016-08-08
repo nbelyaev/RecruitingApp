@@ -31,7 +31,7 @@ namespace RecruiterApp
 			var item = e.Item.ToString();
 			//DisplayAlert("Alert", "You have selected" + item, "OK");
 
-			Navigation.PushModalAsync(new CandidateResults());
+			Navigation.PushAsync(new CandidateResults());
 		}
 
 	}
