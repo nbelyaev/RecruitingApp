@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecruiterApp.InformationAboutCandidatePage">
+	<ContentPage.Content>
+		<StackLayout>
+			<Button Text="Reject" BackgroundColor="Red" TextColor="White"></Button>
+			<Label Text="August 8, 2016" HorizontalTextAlignment="End"></Label>
+			<Label Text="Cristian Pintado" FontAttributes="Bold" FontSize="25"></Label>
+			<Label Text="Reggie Miller" FontSize="10"></Label>
+			<Label Text="1111 N. Odell"></Label>
+			<Label Text="Niles, IL 60714"></Label>
+			<Label Text="708-457-2311"></Label>
+			<Label Text="Position: Associate Consultant"></Label>
+			<Label Text="Skills: .Net Development, Java, C#"></Label>
+			<BoxView Color="Black" HeightRequest="2"></BoxView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
