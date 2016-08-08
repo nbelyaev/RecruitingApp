@@ -2,14 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecruiterApp.HistoryPage" Title="History">
 	<ContentPage.Content>
 		<StackLayout>
-			<ListView  x:Name="listView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="Hello"
-                     Detail="Whats good" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+			<ListView x:Name="historyListView" ItemTapped="SelectionMade">
+			</ListView>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
