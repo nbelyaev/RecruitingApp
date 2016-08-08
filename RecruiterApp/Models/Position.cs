@@ -10,10 +10,6 @@ namespace RecruiterApp
 		string name;
 		string description;
 
-		public Position()
-		{
-		}
-
 		[JsonProperty(PropertyName = "positionId")]
 		public int positionId { get { return this.id; } set { this.id = value; } }
 

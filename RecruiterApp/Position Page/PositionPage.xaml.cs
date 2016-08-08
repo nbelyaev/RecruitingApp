@@ -8,7 +8,7 @@ namespace RecruiterApp
 	public partial class PositionPage : ContentPage
 	{
 		ItemManager manager;
-
+		PositionPageModel positionVM;
 		public PositionPage()
 		{
 			InitializeComponent();
@@ -18,7 +18,15 @@ namespace RecruiterApp
 		}
 		public void loadTable()
 		{
-			
+			positionVM = new PositionPageModel();
+			BindingContext = positionVM;
+
+		}
+		public void onItemTapped(object sender, ItemTappedEventArgs e)
+		{
+			//var item = e.Item.ToString();
+			//DisplayAlert("Alert", "Item Selected" + item, "OK");
+			Navigation.PushAsync(new PositionResultsPage());
 		}
 		protected override async void OnAppearing()
 		{
