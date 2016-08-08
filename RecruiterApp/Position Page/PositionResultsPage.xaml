@@ -1,8 +1,35 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecruiterApp.PositionResultsPage" Title = "Position Results">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecruiterApp.PositionResultsPage" Title="Position Results">
 	<ContentPage.Content>
 		<StackLayout>
-			
+			<Label Text="{Binding positionName}" Font="40" />
+			<Label Text="{Binding positionDescription}" Font="20" />
+<!--			<Grid RowSpacing="0">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+				<ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator" />
+				<ListView x:Name="positionList" ItemTapped="onItemTapped" IsPullToRefreshEnabled="true" Refreshing="OnRefresh" Grid.Row="1" ItemsSource="{Binding Candidate}">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell>
+								<StackLayout>
+									<Label Text="{Binding positionName}" Font="20" />
+								</StackLayout>
+								<ViewCell.ContextActions>
+									<MenuItem Clicked="OnComplete" CommandParameter="{Binding Position}" />
+								</ViewCell.ContextActions>
+								<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="15,5,0,0">
+									<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+										<Label Text="{Binding positionName}" />
+									</StackLayout>
+								</StackLayout>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</Grid>-->
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
