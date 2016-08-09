@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using 
 
 using Xamarin.Forms;
 
@@ -56,9 +57,9 @@ namespace RecruiterApp
 			interviewerNameFace2.IsVisible = true;
 		}
 
-		public void SendADPForm(object sender, EventArgs e)
+		public async void SendADPForm(object sender, EventArgs e)
 		{
-			DisplayAlert("Alert", "Are you sure you want to send Cristian Pintado the ADP Form?", "Yes", "No");
+			var answer = await DisplayAlert("Alert", "Are you sure you want to send Cristian Pintado the ADP Form?", "Yes", "No");
 		}
 	}
 }
