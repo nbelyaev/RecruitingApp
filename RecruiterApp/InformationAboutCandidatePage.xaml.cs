@@ -12,6 +12,16 @@ namespace RecruiterApp
 			InitializeComponent();
 		}
 
+		public void switcher_Toggled(object sender, ToggledEventArgs e)
+		{
+			if (e.Value == true)
+			{
+				//DisplayAlert("Alert", "You have selected" + e.Value, "OK");
+				interviewerName.IsVisible = true;
+				//Face2FaceComments.IsVisible = true;
+			}
+		}
+
 	}
 }
 
