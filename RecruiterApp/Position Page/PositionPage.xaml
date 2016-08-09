@@ -7,7 +7,7 @@
 				<RowDefinition Height="*" />
 			</Grid.RowDefinitions>
 			<ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator" />
-			<ListView x:Name="positionList" ItemTapped="onItemTapped" IsPullToRefreshEnabled="true" Refreshing="OnRefresh" Grid.Row="1" ItemsSource="{Binding Positions}">
+			<ListView x:Name="listOfPositions" ItemTapped="onItemTapped" IsPullToRefreshEnabled="true" Refreshing="OnRefresh" Grid.Row="1" ItemsSource="{Binding Positions}">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>

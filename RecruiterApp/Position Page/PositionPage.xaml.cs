@@ -15,7 +15,6 @@ namespace RecruiterApp
 			manager = ItemManager.DefaultManager;
 			loadTable();
 
-
 		}
 		public void loadTable()
 		{
@@ -52,7 +51,7 @@ namespace RecruiterApp
 		async Task CompletePosition(Position position)
 		{
 			await manager.SaveNewPositionAsync(position);
-			positionList.ItemsSource = await manager.GetTodoItemsAsync();
+			listOfPositions.ItemsSource = await manager.GetTodoItemsAsync();
 		}
 
 		public async void OnSelected(object sender, SelectedItemChangedEventArgs e)
@@ -76,37 +75,41 @@ namespace RecruiterApp
 			}
 
 			// prevents background getting highlighted
-			positionList.SelectedItem = null;
+			listOfPositions.SelectedItem = null;
 		}
 
 		public async void OnRefresh(object sender, EventArgs e)
 		{
 			var list = (ListView)sender;
-			Exception error = null;
-			try
-			{
-				await RefreshItems(false, true);
-			}
-			catch (Exception ex)
-			{
-				error = ex;
-			}
-			finally
-			{
-				list.EndRefresh();
-			}
 
-			if (error != null)
-			{
-				await DisplayAlert("Refresh Error", "Couldn't refresh data (" + error.Message + ")", "OK");
-			}
+			//list.ItemsSource = "Sogeti";
+			//positionList.ItemSource.Add("Sogeti");
+
+			//Exception error = null;
+			//try
+			//{
+			//	await RefreshItems(false, true);
+			//}
+			//catch (Exception ex)
+			//{
+			//	error = ex;
+			//}
+			//finally
+			//{
+			//	list.EndRefresh();
+			//}
+
+			//if (error != null)
+			//{
+			//	await DisplayAlert("Refresh Error", "Couldn't refresh data (" + error.Message + ")", "OK");
+			//}
 		}
 
 		private async Task RefreshItems(bool showActivityIndicator, bool syncItems)
 		{
 			using (var scope = new ActivityIndicatorScope(syncIndicator, showActivityIndicator))
 			{
-				positionList.ItemsSource = await manager.GetTodoItemsAsync(syncItems);
+				listOfPositions.ItemsSource = await manager.GetTodoItemsAsync(syncItems);
 			}
 		}
 
@@ -120,7 +123,7 @@ namespace RecruiterApp
 		async Task CompleteItem(Position position)
 		{
 			await manager.GetPositionItemsAsync(true);
-			positionList.ItemsSource = await manager.GetPositionItemsAsync();
+			listOfPositions.ItemsSource = await manager.GetPositionItemsAsync();
 		}
 
 		private class ActivityIndicatorScope : IDisposable
