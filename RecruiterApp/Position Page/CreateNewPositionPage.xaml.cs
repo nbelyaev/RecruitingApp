@@ -11,6 +11,17 @@ namespace RecruiterApp
 		{
 			InitializeComponent();
 		}
+
+		public async void cancelBttn(object sender, EventArgs e)
+		{
+			var answer = await DisplayAlert("Alert", "Are you sure you want to cancel?", "Yes", "No");
+
+			if (answer)
+			{
+				await Navigation.PopAsync(true);
+				Navigation.RemovePage(this);
+			}
+		}
 	}
 }
 
