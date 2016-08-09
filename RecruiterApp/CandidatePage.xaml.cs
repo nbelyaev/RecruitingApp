@@ -7,16 +7,35 @@ namespace RecruiterApp
 {
 	public partial class CandidatePage : ContentPage
 	{
-		//public InterviewType iType { get; set; }
-		//public TodoItem item { get; set;}
+		public CandidatePage()
+		{
+			InitializeComponent();
+			CandidateListViewPage();
 
-		//public CandidatePage()
-		//{
-		//	InitializeComponent();
+		}
 
-		//	iType = new InterviewType();
-		//	iType.Name = "";
-		//}
+		public void CandidateListViewPage()
+		{
+			var candidates = new List<string>()
+			{
+				"Pintado Cristian",
+				"Kenar Monica",
+				"Belyaev Nikita"
+			};
+
+			var list = candidateListView;
+			list.ItemsSource = candidates;
+			Content = list;
+		}
+
+
+		public void SelectionMade(object sender, ItemTappedEventArgs e)
+		{
+			var item = e.Item.ToString();
+			//DisplayAlert("Alert", "You have selected" + item, "OK");
+
+			Navigation.PushAsync(new CandidateDetailsPage());
+		}
 	}
 }
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecruiterApp.InformationAboutCandidatePage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecruiterApp.CandidateDetailsPage">
 	<ContentPage.Content>
 		<ScrollView>
 			<StackLayout Padding="15">
@@ -56,27 +56,47 @@
 						<Label Text="Phone Interview" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch IsEnabled="false" x:Name="SwitchPhoneInterview">
+							<Switch x:Name="SwitchPhoneInterview" Toggled="switcher_Toggled">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
+					<StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+					<Entry HorizontalTextAlignment="Center" x:Name="interviewerNamePhone" Placeholder="   Name of interviewer          " IsVisible="false">
+					</Entry>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="End">
+						<Button x:Name="AddInterviewer" IsVisible="false" BackgroundColor="Green" TextColor="White" Text=" + " Clicked="AddInterviewerTextBoxPhone"></Button>
+						</StackLayout>
+						</StackLayout>
+						<StackLayout>
+						<Entry HorizontalTextAlignment="Center" x:Name="interviewerNamePhone2" Placeholder="   Name of interviewer    " IsVisible="false">
+						</Entry>
+					</StackLayout>
+
+
 					<!--Face To Face Interview Portion-->
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" IsEnabled="false" x:Name="PhoneInterviewComment">
+						<Editor BackgroundColor="White" x:Name="PhoneInterviewComment">
 						</Editor>
 					</StackLayout>
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Face To Face Interview" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchFace2Face" IsEnabled="false" Toggled="switcher_Toggled">
+							<Switch x:Name="SwitchFace2Face" Toggled="switcherFace2Face">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
-					<Entry HorizontalTextAlignment="Center" x:Name="interviewerName" IsVisible="false">
+					<StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+					<Entry HorizontalTextAlignment="Center" x:Name="interviewerNameFace" Placeholder="Name of interviewer" IsVisible="false">
+					</Entry>
+					<StackLayout Orientation="Horizontal" HorizontalOptions="End">
+						<Button x:Name="AddInterviewerFace2Face" IsVisible="false" BackgroundColor="Green" TextColor="White" Text=" + " Clicked="AddInterviewerTextBoxFace"></Button>
+					</StackLayout>
+					</StackLayout>
+					<Entry HorizontalTextAlignment="Center" x:Name="interviewerNameFace2" Placeholder="Name of interviewer" IsVisible="false">
 					</Entry>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" IsEnabled="false" x:Name="Face2FaceInterviewComment">
+						<Editor BackgroundColor="White" x:Name="Face2FaceInterviewComment">
 						</Editor>
 					</StackLayout>
 					<!--Send Online Application Portion-->
@@ -84,12 +104,12 @@
 						<Label Text="Send Online Application" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchOnlineApplication" IsEnabled="false">
+							<Switch x:Name="SwitchOnlineApplication">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" IsEnabled="false" x:Name="OnlineApplicationComment">
+						<Editor BackgroundColor="White" x:Name="OnlineApplicationComment">
 						</Editor>
 					</StackLayout>
 					<!--Gather Details and References Portion-->
@@ -97,12 +117,12 @@
 						<Label Text="Gather Details and References" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchDetailsReferences" IsEnabled="false">
+							<Switch x:Name="SwitchDetailsReferences">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" IsEnabled="false" x:Name="DetailsReferencesComment">
+						<Editor BackgroundColor="White" x:Name="DetailsReferencesComment">
 						</Editor>
 					</StackLayout>
 					<!--Sending email for ADP Portion-->
@@ -110,12 +130,12 @@
 						<Label Text="Send email for ADP" YAlign="Center">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Button x:Name="ADPSent" Text="   Send!   " BackgroundColor="Green" TextColor="White" IsEnabled="true">
+							<Button x:Name="ADPSent" Text="   Send!   " Clicked="SendADPForm" BackgroundColor="Green" TextColor="White">
 							</Button>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" IsEnabled="false" x:Name="ADPSentComment">
+						<Editor BackgroundColor="White" x:Name="ADPSentComment">
 						</Editor>
 					</StackLayout>
 					<!--Verbal Offer Portion-->
@@ -123,12 +143,12 @@
 						<Label Text="Verbal Offer" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchVerbalOffer" IsEnabled="false">
+							<Switch x:Name="SwitchVerbalOffer">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" IsEnabled="false" x:Name="VerbalOfferComment">
+						<Editor BackgroundColor="White" x:Name="VerbalOfferComment">
 						</Editor>
 					</StackLayout>
 					<!--Formal Offer Portion-->
@@ -136,12 +156,12 @@
 						<Label Text="Formal Offer Sent" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchFormalOffer" IsEnabled="false">
+							<Switch x:Name="SwitchFormalOffer" >
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" IsEnabled="false" x:Name="FormalOfferComment">
+						<Editor BackgroundColor="White" x:Name="FormalOfferComment">
 						</Editor>
 					</StackLayout>
 					<!--Completed Sogeti Resume Portion-->
@@ -149,12 +169,12 @@
 						<Label Text="Completed Sogeti Resume" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchSogetiResume" IsEnabled="false">
+							<Switch x:Name="SwitchSogetiResume" >
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" IsEnabled="false" x:Name="CompletedSogetiResumeComment">
+						<Editor BackgroundColor="White" x:Name="CompletedSogetiResumeComment">
 						</Editor>
 					</StackLayout>
 					<!--Cleared Background Check Portion-->
@@ -162,12 +182,12 @@
 						<Label Text="Cleared Background and Drug Test" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="BackgroundAndDrugTest" IsEnabled="false">
+							<Switch x:Name="BackgroundAndDrugTest">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" IsEnabled="false" x:Name="BackgroundandDrugTestComment">
+						<Editor BackgroundColor="White" x:Name="BackgroundandDrugTestComment">
 						</Editor>
 					</StackLayout>
 					<!--Accepted Offer Portion-->
@@ -175,12 +195,12 @@
 						<Label Text="Accepted Offer" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="AcceptedOffer" IsEnabled="false">
+							<Switch x:Name="AcceptedOffer">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" IsEnabled="false" x:Name="AcceptedOfferComment">
+						<Editor BackgroundColor="White" x:Name="AcceptedOfferComment">
 						</Editor>
 					</StackLayout>
 				</StackLayout>
