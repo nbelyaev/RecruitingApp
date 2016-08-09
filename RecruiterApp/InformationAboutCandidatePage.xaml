@@ -29,10 +29,18 @@
 				</Label>
 				<Label  x:Name="lblPhoneNumber" Text="708-457-2311">
 				</Label>
-				<Label Text="Position: Associate Consultant">
+				<StackLayout HorizontalOptions="StartAndExpand">
+				<Label Text="Position:" FontAttributes="Bold">
 				</Label>
-				<Label Text="Skills: .Net Development, Java, C#">
+				<Label x:Name="lblPosition" Text=".NET Developer">
 				</Label>
+				</StackLayout>
+				<StackLayout HorizontalOptions="StartAndExpand">
+				<Label Text="Skills: " FontAttributes="Bold">
+				</Label>
+				<Label x:Name="lblSkills" Text=".Net Development, iOS, Java, C#, water bottle, projector ">
+				</Label>
+				</StackLayout>
 				<BoxView Color="Black" HeightRequest="2">
 				</BoxView>
 				
