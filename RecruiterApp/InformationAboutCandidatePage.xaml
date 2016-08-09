@@ -43,7 +43,7 @@
 					</Label>
 					<!--Phone Interview Portion-->
 					<StackLayout Orientation="Horizontal">
-						<Label Text="Phone Interview">
+						<Label Text="Phone Interview" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
 							<Switch IsEnabled="false" x:Name="SwitchPhoneInterview">
@@ -56,7 +56,7 @@
 						</Editor>
 					</StackLayout>
 					<StackLayout Orientation="Horizontal">
-						<Label Text="Face To Face Interview">
+						<Label Text="Face To Face Interview" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
 							<Switch x:Name="SwitchFace2Face" IsEnabled="false" Toggled="switcher_Toggled">
@@ -71,7 +71,7 @@
 					</StackLayout>
 					<!--Send Online Application Portion-->
 					<StackLayout Orientation="Horizontal">
-						<Label Text="Send Online Application">
+						<Label Text="Send Online Application" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
 							<Switch x:Name="SwitchOnlineApplication" IsEnabled="false">
@@ -84,7 +84,7 @@
 					</StackLayout>
 					<!--Gather Details and References Portion-->
 					<StackLayout Orientation="Horizontal">
-						<Label Text="Gather Details and References">
+						<Label Text="Gather Details and References" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
 							<Switch x:Name="SwitchDetailsReferences" IsEnabled="false">
@@ -97,10 +97,10 @@
 					</StackLayout>
 					<!--Sending email for ADP Portion-->
 					<StackLayout Orientation="Horizontal">
-						<Label Text="Send email for ADP">
+						<Label Text="Send email for ADP" YAlign="Center">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Button x:Name="ADPSent" Text="Send" BackgroundColor="Silver" TextColor="White" IsEnabled="false">
+							<Button x:Name="ADPSent" Text="   Send!   " BackgroundColor="Green" TextColor="White" IsEnabled="true">
 							</Button>
 						</StackLayout>
 					</StackLayout>
@@ -110,7 +110,7 @@
 					</StackLayout>
 					<!--Verbal Offer Portion-->
 					<StackLayout Orientation="Horizontal">
-						<Label Text="Verbal Offer">
+						<Label Text="Verbal Offer" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
 							<Switch x:Name="SwitchVerbalOffer" IsEnabled="false">
@@ -123,7 +123,7 @@
 					</StackLayout>
 					<!--Formal Offer Portion-->
 					<StackLayout Orientation="Horizontal">
-						<Label Text="Formal Offer Sent">
+						<Label Text="Formal Offer Sent" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
 							<Switch x:Name="SwitchFormalOffer" IsEnabled="false">
@@ -136,7 +136,7 @@
 					</StackLayout>
 					<!--Completed Sogeti Resume Portion-->
 					<StackLayout Orientation="Horizontal">
-						<Label Text="Completed Sogeti Resume">
+						<Label Text="Completed Sogeti Resume" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
 							<Switch x:Name="SwitchSogetiResume" IsEnabled="false">
@@ -149,7 +149,7 @@
 					</StackLayout>
 					<!--Cleared Background Check Portion-->
 					<StackLayout Orientation="Horizontal">
-						<Label Text="Cleared Background and Drug Test">
+						<Label Text="Cleared Background and Drug Test" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
 							<Switch x:Name="BackgroundAndDrugTest" IsEnabled="false">
@@ -162,7 +162,7 @@
 					</StackLayout>
 					<!--Accepted Offer Portion-->
 					<StackLayout Orientation="Horizontal">
-						<Label Text="Accepted Offer">
+						<Label Text="Accepted Offer" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
 							<Switch x:Name="AcceptedOffer" IsEnabled="false">

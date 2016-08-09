@@ -10,6 +10,7 @@ namespace RecruiterApp
 		public InformationAboutCandidatePage()
 		{
 			InitializeComponent();
+			PullFromDatabase();
 		}
 
 		public void switcher_Toggled(object sender, ToggledEventArgs e)
@@ -20,6 +21,10 @@ namespace RecruiterApp
 				interviewerName.IsVisible = true;
 				//Face2FaceComments.IsVisible = true;
 			}
+		}
+
+		public void PullFromDatabase()
+		{
 		}
 
 	}
