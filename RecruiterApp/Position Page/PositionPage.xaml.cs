@@ -15,9 +15,11 @@ namespace RecruiterApp
 			manager = ItemManager.DefaultManager;
 			loadTable();
 
+
 		}
 		public void loadTable()
 		{
+
 			positionVM = new PositionPageModel();
 			BindingContext = positionVM;
 
@@ -25,11 +27,21 @@ namespace RecruiterApp
 		public void onItemTapped(object sender, ItemTappedEventArgs e)
 		{
 			var item = e.Item as Position;
+
+			var positionSelected = new PositionResultsPageModel();
+			positionSelected.positions = item;
+
 			var selectedPosition = new PositionResultsPage();
-			selectedPosition.BindingContext = item;
+			selectedPosition.BindingContext = positionSelected;
 			//DisplayAlert("Alert", "Item Selected: " + item.positionId, "OK");
 			Navigation.PushAsync(selectedPosition);
+
 		}
+		public void createNewPosition(object sender, EventArgs e)
+		{
+			Navigation.PushAsync(new CreateNewPositionPage());
+		}
+
 		protected override async void OnAppearing()
 		{
 			base.OnAppearing();
