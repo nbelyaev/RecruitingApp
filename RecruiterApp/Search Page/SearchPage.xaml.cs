@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using Xamarin.Forms;
 
 namespace RecruiterApp
@@ -11,6 +10,11 @@ namespace RecruiterApp
 		{
 			InitializeComponent();
 		}
+
+		public void searchContent(object sender, EventArgs e)
+		{
+			var pickerItem = SearchFieldPicker.Items [SearchFieldPicker.SelectedIndex];
+			Navigation.PushAsync(new SearchPageResults());
+		}
 	}
 }
-

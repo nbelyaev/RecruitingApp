@@ -2,19 +2,19 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>/Users/monicakenar/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Microsoft.WindowsAzure.Mobile.Ext/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/monicakenar/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>/Users/monicakenar/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/cristianpintado/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Microsoft.WindowsAzure.Mobile.Ext/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/cristianpintado/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/cristianpintado/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
-    <ResolvedAssetDirectory>/Users/monicakenar/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Microsoft.WindowsAzure.Mobile.Ext/library_project_imports/assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>/Users/monicakenar/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>/Users/monicakenar/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>/Users/cristianpintado/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Microsoft.WindowsAzure.Mobile.Ext/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>/Users/cristianpintado/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>/Users/cristianpintado/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>/Users/monicakenar/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Microsoft.WindowsAzure.Mobile.Ext.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/monicakenar/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>/Users/monicakenar/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/cristianpintado/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Microsoft.WindowsAzure.Mobile.Ext.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/cristianpintado/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/cristianpintado/Projects/nbelyaev/RecruitingApp.git/Droid/obj/Debug/__library_projects__/Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

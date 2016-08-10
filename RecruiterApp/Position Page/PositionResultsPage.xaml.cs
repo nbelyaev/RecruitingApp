@@ -23,11 +23,11 @@ namespace RecruiterApp
 		}
 		public void onItemTapped(object sender, ItemTappedEventArgs e)
 		{
-			var item = e.Item as Candidate;
+			// item = e.Item as Candidate;
 			//var selectedPosition = new PositionResultsPage();
 			//selectedPosition.BindingContext = item;
 			////DisplayAlert("Alert", "Item Selected: " + item.positionId, "OK");
-			//Navigation.PushAsync(selectedPosition);
+			Navigation.PushAsync(new InformationAboutCandidatePage());
 		}
 
 		protected override async void OnAppearing()

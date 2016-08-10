@@ -46,9 +46,6 @@
     <Compile Include="CandidatePage.xaml.cs">
       <DependentUpon>CandidatePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SearchPage.xaml.cs">
-      <DependentUpon>SearchPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -80,6 +77,13 @@
     <Compile Include="CandidateDetailsPage.xaml.cs">
       <DependentUpon>CandidateDetailsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Search Page\SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search Page\SearchPageResults.xaml.cs">
+      <DependentUpon>SearchPageResults.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\SearchPageResultsPageModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -131,9 +135,6 @@
     <EmbeddedResource Include="CandidatePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -158,11 +159,18 @@
     <EmbeddedResource Include="CandidateDetailsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search Page\SearchPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search Page\SearchPageResults.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Position Page\" />
+    <Folder Include="Search Page\" />
   </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
