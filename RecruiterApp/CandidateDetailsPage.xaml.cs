@@ -12,7 +12,7 @@ namespace RecruiterApp
 			InitializeComponent();
 		}
 
-		public void switcher_Toggled(object sender, ToggledEventArgs e)
+		public void switcherPhone(object sender, ToggledEventArgs e)
 		{
 			if (e.Value == true)
 			{
@@ -24,7 +24,7 @@ namespace RecruiterApp
 			else {
 				interviewerNamePhone.IsVisible = false;
 				AddInterviewer.IsVisible = false;
-				interviewerNamePhone2.IsVisible = false;
+				moreInterviewerPhone.IsVisible = false;
 			}
 		}
 
@@ -40,20 +40,25 @@ namespace RecruiterApp
 			else {
 				interviewerNameFace.IsVisible = false;
 				AddInterviewerFace2Face.IsVisible = false;
-				interviewerNameFace2.IsVisible = false;
+				moreInterviewerFace.IsVisible = false;
 			}
 		}
 
 		public void AddInterviewerTextBoxPhone(object sender, EventArgs e)
 		{
+			Entry anotherInterviewerPhone = new Entry();
+			anotherInterviewerPhone.Placeholder = "Name of Interviewer";
+			moreInterviewerPhone.Children.Add(anotherInterviewerPhone);
 
-			interviewerNamePhone2.IsVisible = true;
 
 
 		}
 		public void AddInterviewerTextBoxFace(object sender, EventArgs e)
 		{
-			interviewerNameFace2.IsVisible = true;
+			Entry anotherInterviewer = new Entry();
+			anotherInterviewer.Placeholder = "Name of Interviewer";
+			moreInterviewerFace.Children.Add(anotherInterviewer);
+
 		}
 
 		public async void SendADPForm(object sender, EventArgs e)

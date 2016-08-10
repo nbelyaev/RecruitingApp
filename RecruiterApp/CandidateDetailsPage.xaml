@@ -56,7 +56,7 @@
 						<Label Text="Phone Interview" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchPhoneInterview" Toggled="switcher_Toggled">
+							<Switch x:Name="SwitchPhoneInterview" Toggled="switcherPhone">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
@@ -68,8 +68,8 @@
 						</StackLayout>
 						</StackLayout>
 						<StackLayout>
-						<Entry HorizontalTextAlignment="Center" x:Name="interviewerNamePhone2" Placeholder="   Name of interviewer    " IsVisible="false">
-						</Entry>
+					<StackLayout x:Name="moreInterviewerPhone">
+					</StackLayout>
 					</StackLayout>
 
 
@@ -93,8 +93,8 @@
 						<Button x:Name="AddInterviewerFace2Face" IsVisible="false" BackgroundColor="Green" TextColor="White" Text=" + " Clicked="AddInterviewerTextBoxFace"></Button>
 					</StackLayout>
 					</StackLayout>
-					<Entry HorizontalTextAlignment="Center" x:Name="interviewerNameFace2" Placeholder="Name of interviewer" IsVisible="false">
-					</Entry>
+					<StackLayout x:Name="moreInterviewerFace">
+					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
 						<Editor BackgroundColor="White" x:Name="Face2FaceInterviewComment">
 						</Editor>
