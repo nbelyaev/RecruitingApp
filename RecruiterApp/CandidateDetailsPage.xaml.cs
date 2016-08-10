@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -7,6 +7,9 @@ namespace RecruiterApp
 {
 	public partial class CandidateDetailsPage : ContentPage
 	{
+
+		int countclick = 0;
+
 		public CandidateDetailsPage()
 		{
 			InitializeComponent();
@@ -19,14 +22,14 @@ namespace RecruiterApp
 				interviewerNameFace.IsVisible = true;
 				AddInterviewerFace2Face.IsVisible = true;
 				moreInterviewerFace.IsVisible = true;
-				SavePhoneButton.IsVisible = true;
+				SaveFaceButton.IsVisible = true;
 			}
 			else {
 				interviewerNameFace.IsVisible = false;
 				AddInterviewerFace2Face.IsVisible = false;
 				moreInterviewerFace.IsVisible = false;
 				DeleteInterviewerFace.IsVisible = false;
-				SavePhoneButton.IsVisible = false;
+				SaveFaceButton.IsVisible = false;
 
 			}
 		}
@@ -53,11 +56,11 @@ namespace RecruiterApp
 			var value = sender as Editor;
 			if (value.Text.Equals(""))
 			{
-				SavePhoneButton.IsVisible = false;
+				SaveFaceButton.IsVisible = false;
 			}
 			else
 			{
-				SavePhoneButton.IsVisible = true;
+				SaveFaceButton.IsVisible = true;
 			}
 		}
 
@@ -73,8 +76,11 @@ namespace RecruiterApp
 			{
 				DeleteInterviewerFace.IsVisible = true;
 			}
+		}
 
-
+		public void SaveFaceInterview(object sender, EventArgs e)
+		{
+			//put values to the database.
 
 		}
 
@@ -89,12 +95,27 @@ namespace RecruiterApp
 				AddInterviewer.IsVisible = true;
 				moreInterviewerPhone.IsVisible = true;
 				//DeleteInterviewer.IsVisible = true;
+				SavePhoneButton.IsVisible = true;
 			}
 			else {
 				interviewerNamePhone.IsVisible = false;
 				AddInterviewer.IsVisible = false;
 				DeleteInterviewer.IsVisible = false;
 				moreInterviewerPhone.IsVisible = false;
+				SavePhoneButton.IsVisible = false;
+			}
+		}
+
+		public void PhoneChange(object sender, TextChangedEventArgs e)
+		{
+			var value = sender as Editor;
+			if (value.Text.Equals(""))
+			{
+				SavePhoneButton.IsVisible = false;
+			}
+			else
+			{
+				SavePhoneButton.IsVisible = true;
 			}
 		}
 
@@ -131,17 +152,276 @@ namespace RecruiterApp
 
 		public void SavePhoneInterview(object sender, EventArgs e)
 		{
+			//put values to the database.
+		}
+
+
+		//Online Application Portion
+
+		public void switcherOnlineApplication(object sender, ToggledEventArgs e)
+		{
+			if (e.Value == true)
+			{
+				SaveOnlineApplicationButton.IsVisible = true;
+			}
+			else 
+			{
+				SaveOnlineApplicationButton.IsVisible = false;
+			}
+
+		}
+
+		public void OnlineApplicationChange(object sender, TextChangedEventArgs e)
+		{
+			var value = sender as Editor;
+			if (value.Text.Equals(""))
+			{
+				SaveOnlineApplicationButton.IsVisible = false;
+			}
+			else
+			{
+				SaveOnlineApplicationButton.IsVisible = true;
+			}
+		}
+
+		public void SaveOnlineApplication(object sender, EventArgs e)
+		{
+		}
+
+		//Detail and References Content
+
+		public void switcherDetailAndReferences(object sender, ToggledEventArgs e)
+		{
+			if (e.Value == true)
+			{
+				SaveDetailsAndReferencesButton.IsVisible = true;
+			}
+			else
+			{
+				SaveDetailsAndReferencesButton.IsVisible = false;
+			}
+		}
+
+		public void DetailsAndReferencesChange(object sender, TextChangedEventArgs e)
+		{
+			var value = sender as Editor;
+			if (value.Text.Equals(""))
+			{
+				SaveDetailsAndReferencesButton.IsVisible = false;
+			}
+			else
+			{
+				SaveDetailsAndReferencesButton.IsVisible = true;
+			}
+		}
+
+		public void SaveDetailsAndReferences(object sender, EventArgs e)
+		{
+			//send data to the database.
+		}
+
+		//Send email of ADP Content
+
+		public void emailADPChange(object sender, TextChangedEventArgs e)
+		{
+			var value = sender as Editor;
+			if (value.Text.Equals(""))
+			{
+				SaveADPemailButton.IsVisible = false;
+			}
+			else
+			{
+				SaveADPemailButton.IsVisible = true;
+			}
+		}
+
+		public void SaveADPemail(object sender, EventArgs e)
+		{
+			//send data to the database.
 		}
 
 		public async void SendADPForm(object sender, EventArgs e)
 		{
-			var answer = await DisplayAlert("Alert", "Are you sure you want to send Cristian Pintado the ADP Form?", "Yes", "No");
+			countclick++;
 
-			if (answer)
+			if (countclick == 1)
 			{
+				var answer = await DisplayAlert("Alert", "Are you sure you want to send Cristian Pintado the ADP Form?", "Yes", "No");
+
+				if (answer)
+				{
+					ADPSent.Text = "   Sent!   ";
+					ADPSent.BackgroundColor = Xamarin.Forms.Color.Gray;
+				}
+			}
+			else if(countclick > 1) {
+				var answeragain = DisplayAlert("Alert", "You already sent an email to this individual.", "Ok" );
 			}
 
 		}
+
+
+		//Verbal Offer Portion
+		public void switcherVerbalOffer(object sender, ToggledEventArgs e)
+		{
+			if (e.Value == true)
+			{
+				VerbalOfferButton.IsVisible = true;
+			}
+			else
+			{
+				VerbalOfferButton.IsVisible = false;
+			}
+		}
+
+		public void SaveVerbalOffer(object sender, EventArgs e)
+		{
+
+			//send data to the database.
+		}
+
+		public void VerbalOfferChange(object sender, TextChangedEventArgs e)
+		{
+			var value = sender as Editor;
+			if (value.Text.Equals(""))
+			{
+				VerbalOfferButton.IsVisible = false;
+			}
+			else
+			{
+				VerbalOfferButton.IsVisible = true;
+			}
+		}
+
+		//Formal Offer portion
+
+		public void SaveFormalOffer(object sender, EventArgs e)
+		{
+			//send data to database.
+		}
+
+
+		public void switcherFormalOffer(object sender, ToggledEventArgs e) 
+		{ 
+			if (e.Value == true)
+			{
+				FormalOfferButton.IsVisible = true;
+			}
+			else
+			{
+				FormalOfferButton.IsVisible = false;
+			}
+		}
+
+		public void FormalOfferChange(object sender, TextChangedEventArgs e)
+		{
+			var value = sender as Editor;
+			if (value.Text.Equals(""))
+			{
+				FormalOfferButton.IsVisible = false;
+			}
+			else
+			{
+				FormalOfferButton.IsVisible = true;
+			}
+		}
+
+		//Sogeti Resume Portion
+
+		public void switcherSogetiResume(object sender, ToggledEventArgs e)
+		{
+			if (e.Value == true)
+			{
+				SogetiResumeButton.IsVisible = true;
+			}
+			else
+			{
+				SogetiResumeButton.IsVisible = false;
+			}
+		}
+
+		public void SaveSogetiResume(object sender, EventArgs e)
+		{
+			//Save things to database.
+		}
+
+		public void SogetiResumeChange(object sender, TextChangedEventArgs e)
+		{
+			var value = sender as Editor;
+			if (value.Text.Equals(""))
+			{
+				SogetiResumeButton.IsVisible = false;
+			}
+			else
+			{
+				SogetiResumeButton.IsVisible = true;
+			}
+		}
+
+		//Background check portion
+
+		public void SaveBackgroundCheck(object sender, EventArgs e)
+		{
+			//send data to the database.
+		}
+
+		public void BackgroundCheckChange(object sender, TextChangedEventArgs e)
+		{
+			var value = sender as Editor;
+			if (value.Text.Equals(""))
+			{
+				BackgroundCheckButton.IsVisible = false;
+			}
+			else
+			{
+				BackgroundCheckButton.IsVisible = true;
+			}
+		}
+
+		public void switcherBackground(object sender, ToggledEventArgs e)
+		{
+			if (e.Value == true)
+			{
+				BackgroundCheckButton.IsVisible = true;
+			}
+			else
+			{
+				BackgroundCheckButton.IsVisible = false;
+			}
+		}
+
+		//Accepted Offer portion
+
+		public void AcceptedOfferChange( object sender, TextChangedEventArgs e)
+		{
+			var value = sender as Editor;
+			if (value.Text.Equals(""))
+			{
+				AcceptedOfferButton.IsVisible = false;
+			}
+			else
+			{
+				AcceptedOfferButton.IsVisible = true;
+			}
+		}
+
+		public void SaveAcceptedOffer(object sender, EventArgs e)
+		{
+			//send data to the database.
+		}
+
+		public void switcherAcceptedOffer(object sender, ToggledEventArgs e)
+		{
+			if (e.Value == true)
+			{
+				AcceptedOfferButton.IsVisible = true;
+			}
+			else
+			{
+				AcceptedOfferButton.IsVisible = false;
+			}
+		}
+
 	}
 }
 

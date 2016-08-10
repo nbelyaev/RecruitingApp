@@ -60,6 +60,7 @@
 							</Switch>
 						</StackLayout>
 					</StackLayout>
+					
 					<!--Face To Face Interview Portion-->
 					<StackLayout BackgroundColor="Black" Padding="1">
 						<Editor BackgroundColor="White" IsEnabled="false" x:Name="PhoneInterviewComment">
@@ -79,12 +80,13 @@
 						<Editor BackgroundColor="White" IsEnabled="false" x:Name="Face2FaceInterviewComment">
 						</Editor>
 					</StackLayout>
+					
 					<!--Send Online Application Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Send Online Application" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchOnlineApplication" IsEnabled="false">
+							<Switch x:Name="SwitchOnlineApplication" IsEnabled="false" Toggled="switcher_">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
@@ -92,6 +94,7 @@
 						<Editor BackgroundColor="White" IsEnabled="false" x:Name="OnlineApplicationComment">
 						</Editor>
 					</StackLayout>
+					
 					<!--Gather Details and References Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Gather Details and References" YAlign="End">
@@ -105,6 +108,7 @@
 						<Editor BackgroundColor="White" IsEnabled="false" x:Name="DetailsReferencesComment">
 						</Editor>
 					</StackLayout>
+					
 					<!--Sending email for ADP Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Send email for ADP" YAlign="Center">

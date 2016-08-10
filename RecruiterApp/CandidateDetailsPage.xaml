@@ -72,13 +72,13 @@
 					<StackLayout x:Name="moreInterviewerPhone">
 					</StackLayout>
 					</StackLayout>
-
-
-					<!--Face To Face Interview Portion-->
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" x:Name="PhoneInterviewComment">
+						<Editor TextChanged="PhoneChange" BackgroundColor="White" x:Name="PhoneInterviewComment">
 						</Editor>
 					</StackLayout>
+					<Button x:Name="SavePhoneButton" Text="Save" IsVisible="false" BackgroundColor="Green" Clicked="SavePhoneInterview" TextColor="White"></Button>
+
+					<!--Face To Face Interview Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Face To Face Interview" YAlign="End">
 						</Label>
@@ -101,33 +101,38 @@
 						<Editor TextChanged="Face2FaceChange" BackgroundColor="White" x:Name="Face2FaceInterviewComment">
 						</Editor>
 					</StackLayout>
-					<Button x:Name="SavePhoneButton" Text="Save" IsVisible="false" BackgroundColor="Green" Clicked="SavePhoneInterview" TextColor="White"></Button>
+					<Button x:Name="SaveFaceButton" Text="Save" IsVisible="false" BackgroundColor="Green" Clicked="SaveFaceInterview" TextColor="White"></Button>
+
 					<!--Send Online Application Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Send Online Application" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchOnlineApplication">
+							<Switch x:Name="SwitchOnlineApplication" Toggled="switcherOnlineApplication">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" x:Name="OnlineApplicationComment">
+						<Editor TextChanged="OnlineApplicationChange" BackgroundColor="White" x:Name="OnlineApplicationComment">
 						</Editor>
 					</StackLayout>
+					<Button x:Name="SaveOnlineApplicationButton" Text="Save" IsVisible="false" BackgroundColor="Green" Clicked="SaveOnlineApplication" TextColor="White"></Button>
+
 					<!--Gather Details and References Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Gather Details and References" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchDetailsReferences">
+							<Switch x:Name="SwitchDetailsReferences" Toggled="switcherDetailAndReferences">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" x:Name="DetailsReferencesComment">
+						<Editor TextChanged="DetailsAndReferencesChange" BackgroundColor="White" x:Name="DetailsReferencesComment">
 						</Editor>
 					</StackLayout>
+					<Button x:Name="SaveDetailsAndReferencesButton" Text="Save" IsVisible="false" BackgroundColor="Green" Clicked="SaveDetailsAndReferences" TextColor="White"></Button>
+					
 					<!--Sending email for ADP Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Send email for ADP" YAlign="Center">
@@ -138,74 +143,85 @@
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" x:Name="ADPSentComment">
+						<Editor TextChanged="emailADPChange" BackgroundColor="White" x:Name="ADPSentComment">
 						</Editor>
 					</StackLayout>
+					<Button x:Name="SaveADPemailButton" Text="Save" IsVisible="false" BackgroundColor="Green" Clicked="SaveADPemail" TextColor="White"></Button>
+					
 					<!--Verbal Offer Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Verbal Offer" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchVerbalOffer">
+							<Switch x:Name="SwitchVerbalOffer" Toggled="switcherVerbalOffer">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" x:Name="VerbalOfferComment">
+						<Editor TextChanged="VerbalOfferChange" BackgroundColor="White" x:Name="VerbalOfferComment">
 						</Editor>
 					</StackLayout>
+					<Button x:Name="VerbalOfferButton" Text="Save" IsVisible="false" BackgroundColor="Green" Clicked="SaveVerbalOffer" TextColor="White"></Button>
+					
 					<!--Formal Offer Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Formal Offer Sent" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchFormalOffer" >
+							<Switch x:Name="SwitchFormalOffer" Toggled="switcherFormalOffer" >
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" x:Name="FormalOfferComment">
+						<Editor TextChanged="FormalOfferChange" BackgroundColor="White" x:Name="FormalOfferComment">
 						</Editor>
 					</StackLayout>
+					<Button x:Name="FormalOfferButton" Text="Save" IsVisible="false" BackgroundColor="Green" Clicked="SaveFormalOffer" TextColor="White"></Button>
+					
 					<!--Completed Sogeti Resume Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Completed Sogeti Resume" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchSogetiResume" >
+							<Switch x:Name="SwitchSogetiResume" Toggled="switcherSogetiResume" >
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" x:Name="CompletedSogetiResumeComment">
+						<Editor TextChanged="SogetiResumeChange" BackgroundColor="White" x:Name="CompletedSogetiResumeComment">
 						</Editor>
 					</StackLayout>
+					<Button x:Name="SogetiResumeButton" Text="Save" IsVisible="false" BackgroundColor="Green" Clicked="SaveSogetiResume" TextColor="White"></Button>
+					
 					<!--Cleared Background Check Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Cleared Background and Drug Test" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="BackgroundAndDrugTest">
+							<Switch x:Name="BackgroundAndDrugTest" Toggled="switcherBackground">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" x:Name="BackgroundandDrugTestComment">
+						<Editor TextChanged="BackgroundCheckChange" BackgroundColor="White" x:Name="BackgroundandDrugTestComment">
 						</Editor>
 					</StackLayout>
+					<Button x:Name="BackgroundCheckButton" Text="Save" IsVisible="false" BackgroundColor="Green" Clicked="SaveBackgroundCheck" TextColor="White"></Button>
+					
 					<!--Accepted Offer Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Accepted Offer" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="AcceptedOffer">
+							<Switch x:Name="AcceptedOffer" Toggled="switcherAcceptedOffer">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" x:Name="AcceptedOfferComment">
+						<Editor TextChanged="AcceptedOfferChange" BackgroundColor="White" x:Name="AcceptedOfferComment">
 						</Editor>
 					</StackLayout>
+					<Button x:Name="AcceptedOfferButton" Text="Save" IsVisible="false" BackgroundColor="Green" Clicked="SaveAcceptedOffer" TextColor="White"></Button>
 				</StackLayout>
 			</StackLayout>
 		</ScrollView>
