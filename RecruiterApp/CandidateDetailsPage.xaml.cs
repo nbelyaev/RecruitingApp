@@ -12,20 +12,22 @@ namespace RecruiterApp
 			InitializeComponent();
 		}
 
-
 		public void switcherFace2Face(object sender, ToggledEventArgs e)
 		{
 			if (e.Value == true)
 			{
 				interviewerNameFace.IsVisible = true;
 				AddInterviewerFace2Face.IsVisible = true;
-				//DeleteInterviewerFace.IsVisible = true;
+				moreInterviewerFace.IsVisible = true;
+				SavePhoneButton.IsVisible = true;
 			}
 			else {
 				interviewerNameFace.IsVisible = false;
 				AddInterviewerFace2Face.IsVisible = false;
 				moreInterviewerFace.IsVisible = false;
 				DeleteInterviewerFace.IsVisible = false;
+				SavePhoneButton.IsVisible = false;
+
 			}
 		}
 
@@ -43,6 +45,35 @@ namespace RecruiterApp
 
 				}
 			}
+		}
+
+
+		public void Face2FaceChange(object sender, TextChangedEventArgs e)
+		{
+			var value = sender as Editor;
+			if (value.Text.Equals(""))
+			{
+				SavePhoneButton.IsVisible = false;
+			}
+			else
+			{
+				SavePhoneButton.IsVisible = true;
+			}
+		}
+
+		public void AddInterviewerTextBoxFace(object sender, EventArgs e)
+		{
+			Entry anotherInterviewer = new Entry();
+			anotherInterviewer.Placeholder = "Name of Interviewer";
+			moreInterviewerFace.Children.Add(anotherInterviewer);
+
+			var countTextBoxes = moreInterviewerFace.Children.Count;
+
+			if (countTextBoxes > 0)
+			{
+				DeleteInterviewerFace.IsVisible = true;
+			}
+
 
 
 		}
@@ -56,6 +87,7 @@ namespace RecruiterApp
 				//DisplayAlert("Alert", "You have selected" + e.Value, "OK");
 				interviewerNamePhone.IsVisible = true;
 				AddInterviewer.IsVisible = true;
+				moreInterviewerPhone.IsVisible = true;
 				//DeleteInterviewer.IsVisible = true;
 			}
 			else {
@@ -97,21 +129,8 @@ namespace RecruiterApp
 			}
 		}
 
-		public void AddInterviewerTextBoxFace(object sender, EventArgs e)
+		public void SavePhoneInterview(object sender, EventArgs e)
 		{
-			Entry anotherInterviewer = new Entry();
-			anotherInterviewer.Placeholder = "Name of Interviewer";
-			moreInterviewerFace.Children.Add(anotherInterviewer);
-
-			var countTextBoxes = moreInterviewerFace.Children.Count;
-
-			if (countTextBoxes > 0)
-			{
-				DeleteInterviewerFace.IsVisible = true;
-			}
-
-
-
 		}
 
 		public async void SendADPForm(object sender, EventArgs e)

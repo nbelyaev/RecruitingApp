@@ -98,9 +98,10 @@
 					<StackLayout x:Name="moreInterviewerFace">
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">
-						<Editor BackgroundColor="White" x:Name="Face2FaceInterviewComment">
+						<Editor TextChanged="Face2FaceChange" BackgroundColor="White" x:Name="Face2FaceInterviewComment">
 						</Editor>
 					</StackLayout>
+					<Button x:Name="SavePhoneButton" Text="Save" IsVisible="false" BackgroundColor="Green" Clicked="SavePhoneInterview" TextColor="White"></Button>
 					<!--Send Online Application Portion-->
 					<StackLayout Orientation="Horizontal">
 						<Label Text="Send Online Application" YAlign="End">
