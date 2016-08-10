@@ -64,7 +64,8 @@
 					<Entry HorizontalTextAlignment="Center" x:Name="interviewerNamePhone" Placeholder="   Name of interviewer          " IsVisible="false">
 					</Entry>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="End">
-						<Button x:Name="AddInterviewer" IsVisible="false" BackgroundColor="Green" TextColor="White" Text=" + " Clicked="AddInterviewerTextBoxPhone"></Button>
+						<Button x:Name="AddInterviewer" IsVisible="false" BackgroundColor="Green" TextColor="White" Text="  +  " Clicked="AddInterviewerTextBoxPhone"></Button>
+						<Button x:Name="DeleteInterviewer" IsVisible="false" BackgroundColor="Red" TextColor="White" Text="  -  " Clicked="DeleteInterviewerTextBoxPhone"></Button>
 						</StackLayout>
 						</StackLayout>
 						<StackLayout>
@@ -87,11 +88,12 @@
 						</StackLayout>
 					</StackLayout>
 					<StackLayout Orientation="Horizontal" HorizontalOptions="Start">
-					<Entry HorizontalTextAlignment="Center" x:Name="interviewerNameFace" Placeholder="Name of interviewer" IsVisible="false">
+					<Entry HorizontalTextAlignment="Center" x:Name="interviewerNameFace" Placeholder="   Name of interviewer          " IsVisible="false">
 					</Entry>
 					<StackLayout Orientation="Horizontal" HorizontalOptions="End">
 						<Button x:Name="AddInterviewerFace2Face" IsVisible="false" BackgroundColor="Green" TextColor="White" Text=" + " Clicked="AddInterviewerTextBoxFace"></Button>
-					</StackLayout>
+						<Button x:Name="DeleteInterviewerFace" IsVisible="false" BackgroundColor="Red" TextColor="White" Text="  -  " Clicked="DeleteInterviewerTextBoxFace"></Button>
+						</StackLayout>
 					</StackLayout>
 					<StackLayout x:Name="moreInterviewerFace">
 					</StackLayout>
