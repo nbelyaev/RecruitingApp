@@ -15,12 +15,14 @@ namespace RecruiterApp
 			//loadCandidateTable();
 		}
 
+		//Binds the candidate table in the xaml file
 		public void loadCandidateTable()
 		{
 			positionResultsVM = new PositionResultsPageModel();
 			BindingContext = positionResultsVM;
 
 		}
+		//opens the informationAboutCanidatePage
 		public void onItemTapped(object sender, ItemTappedEventArgs e)
 		{
 			// item = e.Item as Candidate;
