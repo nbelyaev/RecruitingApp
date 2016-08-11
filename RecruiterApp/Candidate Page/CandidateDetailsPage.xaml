@@ -31,12 +31,16 @@
 				</Label>
 				<Label  x:Name="lblemail" Text="cristian.pintado@us.sogeti.com">
 				</Label>
-				<StackLayout HorizontalOptions="StartAndExpand">
-				<Label Text="Position:" FontAttributes="Bold">
+				<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+				<Label Text="Position:" YAlign="Center" FontAttributes="Bold">
 				</Label>
+				<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+				<Button x:Name="AddCandidateToAnotherPosition" WidthRequest="20" HeightRequest="20" BackgroundColor="Green" Clicked="AddToAnotherPosition" Text="+" TextColor="White"></Button>
+				</StackLayout>
+				</StackLayout>
 				<Label x:Name="lblPosition" Text=".NET Developer">
 				</Label>
-				</StackLayout>
+
 				<StackLayout HorizontalOptions="StartAndExpand">
 				<Label Text="Skills: " FontAttributes="Bold">
 				</Label>

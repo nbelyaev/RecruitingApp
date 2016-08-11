@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using Xamarin.Forms;
+
+
 
 namespace RecruiterApp
 {
@@ -14,6 +15,11 @@ namespace RecruiterApp
 		public CandidateDetailsPage()
 		{
 			InitializeComponent();
+		}
+
+		public void AddToAnotherPosition(object sender, EventArgs e)
+		{
+			DisplayAlert("Alert", "Added this person to a position", "ok");
 		}
 
 		public void switcherFace2Face(object sender, ToggledEventArgs e)
@@ -169,6 +175,12 @@ namespace RecruiterApp
 
 				//Store in the database that the email has been sent.
 
+
+				//SendMail();
+
+
+
+
 				if (answer)
 				{
 					OnlineApplicationButton.Text = "   Sent!   ";
@@ -179,6 +191,14 @@ namespace RecruiterApp
 			{
 				await DisplayAlert("Alert", "You already sent this email to this individual.", "Ok");
 			}
+		}
+
+
+
+		public void SendMail(List<string> to, List<string> cc, string subject, string body, Object controlToPresent)
+		{
+			
+
 		}
 
 		public void OnlineApplicationChange(object sender, TextChangedEventArgs e)

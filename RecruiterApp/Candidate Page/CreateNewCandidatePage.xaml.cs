@@ -36,7 +36,25 @@ namespace RecruiterApp
 			}
 		}
 
+		private bool _canClose = true;
 
+		protected override bool OnBackButtonPressed()
+		{
+
+			ShowExitDialog();
+
+			return base.OnBackButtonPressed();
+		}
+
+		public async void ShowExitDialog()
+		{
+			var answer = await DisplayAlert("Exit", "If you leave all of your changes will not be saved", "Ok", "Not Ok.");
+			if (answer)
+			{
+				_canClose = false;
+				base.OnBackButtonPressed();
+			}
+		}
 
 
 	}
