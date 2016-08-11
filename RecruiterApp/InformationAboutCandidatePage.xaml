@@ -70,7 +70,7 @@
 						<Label Text="Face To Face Interview" YAlign="End">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchFace2Face" IsEnabled="false" Toggled="switcher_Toggled">
+							<Switch x:Name="SwitchFace2Face" IsEnabled="false">
 							</Switch>
 						</StackLayout>
 					</StackLayout>
@@ -83,11 +83,11 @@
 					
 					<!--Send Online Application Portion-->
 					<StackLayout Orientation="Horizontal">
-						<Label Text="Send Online Application" YAlign="End">
+						<Label Text="Send Online Application" YAlign="Center">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchOnlineApplication" IsEnabled="false" Toggled="switcher_">
-							</Switch>
+							<Button x:Name="OnlineApplicationButton" Text="   Send!   " BackgroundColor="Green" TextColor="White" IsEnabled="true">
+							</Button>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">

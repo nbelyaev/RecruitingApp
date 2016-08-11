@@ -13,18 +13,11 @@ namespace RecruiterApp
 			PullFromDatabase();
 		}
 
-		public void switcher_Toggled(object sender, ToggledEventArgs e)
-		{
-			if (e.Value == true)
-			{
-				//DisplayAlert("Alert", "You have selected" + e.Value, "OK");
-				interviewerName.IsVisible = true;
-				//Face2FaceComments.IsVisible = true;
-			}
-		}
 
 		public void PullFromDatabase()
 		{
+			//this method will pull from the database and fill all of the fields to be read only.
+
 		}
 
 	}

@@ -35,6 +35,10 @@ namespace RecruiterApp
 				Navigation.RemovePage(this);
 			}
 		}
+
+
+
+
 	}
 }
 
