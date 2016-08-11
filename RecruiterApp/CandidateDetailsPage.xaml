@@ -105,11 +105,11 @@
 
 					<!--Send Online Application Portion-->
 					<StackLayout Orientation="Horizontal">
-						<Label Text="Send Online Application" YAlign="End">
+						<Label Text="Send Online Application" YAlign="Center">
 						</Label>
 						<StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-							<Switch x:Name="SwitchOnlineApplication" Toggled="switcherOnlineApplication">
-							</Switch>
+							<Button x:Name="OnlineApplicationButton" Text="   Send!   " Clicked="SendOnlineApplication" BackgroundColor="Green" TextColor="White">
+							</Button>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout BackgroundColor="Black" Padding="1">

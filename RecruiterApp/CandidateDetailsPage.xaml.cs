@@ -8,7 +8,8 @@ namespace RecruiterApp
 	public partial class CandidateDetailsPage : ContentPage
 	{
 
-		int countclick = 0;
+		int countclickADP = 0;
+		int countclickOnlineApp = 0;
 
 		public CandidateDetailsPage()
 		{
@@ -158,17 +159,26 @@ namespace RecruiterApp
 
 		//Online Application Portion
 
-		public void switcherOnlineApplication(object sender, ToggledEventArgs e)
+		public async void SendOnlineApplication(object sender, EventArgs e)
 		{
-			if (e.Value == true)
-			{
-				SaveOnlineApplicationButton.IsVisible = true;
-			}
-			else 
-			{
-				SaveOnlineApplicationButton.IsVisible = false;
-			}
+			countclickOnlineApp++;
 
+			if (countclickOnlineApp == 1)
+			{
+				var answer = await DisplayAlert("Alert", "Are you sure you want to send Cristian Pintado the Online Application?", "Yes", "No");
+
+				//Store in the database that the email has been sent.
+
+				if (answer)
+				{
+					OnlineApplicationButton.Text = "   Sent!   ";
+					OnlineApplicationButton.BackgroundColor = Xamarin.Forms.Color.Gray;
+				}
+			}
+			else if (countclickOnlineApp > 1)
+			{
+				await DisplayAlert("Alert", "You already sent this email to this individual.", "Ok");
+			}
 		}
 
 		public void OnlineApplicationChange(object sender, TextChangedEventArgs e)
@@ -242,11 +252,15 @@ namespace RecruiterApp
 
 		public async void SendADPForm(object sender, EventArgs e)
 		{
-			countclick++;
+			countclickADP++;
 
-			if (countclick == 1)
+			if (countclickADP == 1)
 			{
 				var answer = await DisplayAlert("Alert", "Are you sure you want to send Cristian Pintado the ADP Form?", "Yes", "No");
+
+
+				//Store in the database that the email has been sent.
+
 
 				if (answer)
 				{
@@ -254,8 +268,8 @@ namespace RecruiterApp
 					ADPSent.BackgroundColor = Xamarin.Forms.Color.Gray;
 				}
 			}
-			else if(countclick > 1) {
-				var answeragain = DisplayAlert("Alert", "You already sent an email to this individual.", "Ok" );
+			else if(countclickADP > 1) {
+				await DisplayAlert("Alert", "You already sent an email to this individual.", "Ok" );
 			}
 
 		}
