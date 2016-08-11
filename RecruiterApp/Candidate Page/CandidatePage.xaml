@@ -6,4 +6,7 @@
 			</ListView>
 		</StackLayout>
 	</ContentPage.Content>
+		<ContentPage.ToolbarItems>
+	<ToolbarItem Name="newCandidate" Text="+" Clicked="AddNewCandidate" ></ToolbarItem>
+	</ContentPage.ToolbarItems>
 </ContentPage>

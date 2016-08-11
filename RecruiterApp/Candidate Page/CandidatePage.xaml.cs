@@ -36,6 +36,14 @@ namespace RecruiterApp
 
 			Navigation.PushAsync(new CandidateDetailsPage());
 		}
+
+		public void AddNewCandidate(object sender, EventArgs e)
+		{
+			//Add new candidate to the database.
+
+			Navigation.PushAsync(new CreateNewCandidatePage());
+
+		}
 	}
 }
 

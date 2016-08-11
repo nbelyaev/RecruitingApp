@@ -39,6 +39,8 @@ namespace RecruiterApp
 		public void createNewPosition(object sender, EventArgs e)
 		{
 			Navigation.PushAsync(new CreateNewPositionPage());
+
+			//add new position to the database.
 		}
 
 		protected override async void OnAppearing()
