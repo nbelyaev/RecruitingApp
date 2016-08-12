@@ -36,7 +36,15 @@
 				</Label>
 				<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
 				<Button x:Name="AddCandidateToAnotherPosition" WidthRequest="20" HeightRequest="20" BackgroundColor="Green" Clicked="AddToAnotherPosition" Text="+" TextColor="White"></Button>
-				</StackLayout>
+					<Picker x:Name="AddCandidateToPositionPicker" SelectedIndex="1" SelectedIndexChanged="ChangedPosition" HeightRequest="20" WidthRequest="130"  Grid.Row="1" IsVisible="false">
+					<Picker.Items>
+					<x:String>Candidate</x:String>
+					<x:String>Recruiter</x:String>
+					<x:String>Position</x:String>
+					</Picker.Items>
+					</Picker>
+						<Button x:Name="SaveCandidateToPosition" WidthRequest="100" HeightRequest="20" BackgroundColor="Green" IsVisible="false" Clicked="SaveCandidateToAnotherPosition" Text="Save" TextColor="White"></Button>
+						</StackLayout>
 				</StackLayout>
 				<Label x:Name="lblPosition" Text=".NET Developer">
 				</Label>

@@ -17,9 +17,30 @@ namespace RecruiterApp
 			InitializeComponent();
 		}
 
+		public void ChangedPosition(object sender, EventArgs e)
+		{
+			SaveCandidateToPosition.IsVisible = true;
+		}
+
+		public async void SaveCandidateToAnotherPosition(object sender, EventArgs e)
+		{
+			var candidate = lblName.Text;
+			var position = AddCandidateToPositionPicker.Items[AddCandidateToPositionPicker.SelectedIndex];
+			var answer = await DisplayAlert("Warning", "Are you sure you want to add " + candidate + " to " + position , "Yes", "No");
+
+
+			if (answer)
+			{
+				SaveCandidateToPosition.IsVisible = false;
+				AddCandidateToPositionPicker.IsVisible = false;
+				DisplayAlert("Alert", "Added! Check the candidates page!", "Ok");
+			}
+		}
+
 		public void AddToAnotherPosition(object sender, EventArgs e)
 		{
-			DisplayAlert("Alert", "Added this person to a position", "ok");
+			AddCandidateToPositionPicker.IsVisible = true;
+			//DisplayAlert("Alert", "Added this person to a position", "ok");
 		}
 
 		public void switcherFace2Face(object sender, ToggledEventArgs e)
