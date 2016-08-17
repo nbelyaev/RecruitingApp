@@ -24,7 +24,7 @@
 				<local:SearchPage/>
 			</x:Arguments>
 		</NavigationPage>
-		<local:TodoList/>
-		<local:InterviewTypePage/>
+<!--		<local:TodoList/>
+		<local:InterviewTypePage/>-->
 	</TabbedPage.Children>
 </TabbedPage>

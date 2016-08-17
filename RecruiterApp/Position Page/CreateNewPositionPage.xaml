@@ -4,7 +4,7 @@
 		<StackLayout BackgroundColor="White" Spacing="20" >
 			<StackLayout Padding="10">
 			<Label Text="Position Name" />
-			<Entry Placeholder="Enter a Description" x:Name="positionNameTxt" />
+			<Entry Placeholder="Enter a Name" x:Name="positionNameTxt" />
 			</StackLayout>
 
 			<StackLayout Padding="10">

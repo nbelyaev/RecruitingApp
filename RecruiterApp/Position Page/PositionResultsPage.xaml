@@ -26,8 +26,8 @@
 								</ViewCell.ContextActions>
 								<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="15,5,0,0">
 									<StackLayout Padding="7,0,0,0" VerticalOptions="StartAndExpand" Orientation="Horizontal">
-										<Label Text="{Binding lastName}"/>
-										<Label Text="{Binding firstName}" />				
+										<Label Text="{Binding candidateLastName}"/>
+										<Label Text="{Binding candidateFirstName}" />				
 									</StackLayout>
 								</StackLayout>
 							</ViewCell>

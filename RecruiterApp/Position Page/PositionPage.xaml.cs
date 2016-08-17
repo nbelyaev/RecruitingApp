@@ -43,12 +43,12 @@ namespace RecruiterApp
 			//add new position to the database.
 		}
 
-		protected override async void OnAppearing()
+		protected override void OnAppearing()
 		{
 			base.OnAppearing();
 
 			// Set syncItems to true in order to synchronize the data on startup when running in offline mode
-			await RefreshItems(true, syncItems: false);
+			//await RefreshItems(true, syncItems: false);
 		}
 		async Task CompletePosition(Position position)
 		{
